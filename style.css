@@ -1,0 +1,12 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    background-image: url('./assets/bgInicial.png');
+    height: 100%;
+    background-size: cover;
+    background-position: center; 
+}
