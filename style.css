@@ -43,9 +43,25 @@ html, body {
     margin-top: 2rem;
   }
   
-  .logo {
+.logo {
     height: 15%;
-  }
+    animation: logoTransform 1s ease-in forwards;
+}
+
+@keyframes logoTransform {
+    0% {
+        height: 15%;
+        transform: scale(1);
+    }
+    50% {
+        height: 17%;
+        transform: scale(1.1);
+    }
+    100% {
+        height: 20%;
+        transform: scale(1.1);
+    }
+}
 
 #start-button {
     background-color: #778da9;
@@ -69,6 +85,38 @@ html, body {
     filter: brightness(1.2);
     outline-offset: 1rem; /* Expands slowly due to transition */
 }
+
+#start-button::after, card::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #415a77;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 10px;
+    border-radius: 50px;
+    transform: scale(1);
+    transition: all 0.3s ease, outline-offset 0.3s ease;
+
+    background-image: conic-gradient(45deg, red, #006aff, #1b263b);
+    animation: 3s spin linear infinite;
+}
+
+#start-button::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+#start-button:hover::after {
+    outline-offset: 0.7rem;
+    outline-style: double;
+
+}
+
+
 
 
 
