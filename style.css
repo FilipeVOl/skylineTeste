@@ -39,23 +39,34 @@ html, body {
     }
 }
 
+@keyframes infiniteOutline {
+    0%, 30%, 70%, 100% {
+        outline-offset: 1rem;
+    }
+    15%, 50%, 80% {
+        outline-offset: 1.5rem;
+    }
+}
+
   .upfooter {
     margin-top: 2rem;
   }
-  
+
+
 .logo {
     height: 15%;
-    animation: logoTransform 1s ease-in forwards;
+    animation: logoTransform 1.5s ease-in-out forwards;
+    will-change: transform, height;
 }
 
 @keyframes logoTransform {
     0% {
-        height: 20%;
-        transform: scale(1.1);
+        height: 18%;
+        transform: scale(1.2);
     }
     50% {
-        height: 17%;
-        transform: scale(1.05);
+        height: 16%;
+        transform: scale(1.1);
     }
     100% {
         height: 15%;
@@ -83,7 +94,8 @@ html, body {
     outline-offset: 0.5rem;
     transform: perspective(500px) rotate3d(1, 1, 0, 20deg);
     filter: brightness(1.2);
-    outline-offset: 1rem; /* Expands slowly due to transition */
+    outline-offset: 1rem;
+    animation: infiniteOutline 6s infinite ease-in-out;
 }
 
 #start-button::after, card::before {
@@ -102,7 +114,7 @@ html, body {
     transition: all 0.3s ease, outline-offset 0.3s ease;
 
     background-image: conic-gradient(45deg, red, #006aff, #1b263b);
-    animation: 3s spin linear infinite;
+    animation: 3s spin linear infinite, infiniteOutline 6s infinite ease-in-out;
 }
 
 #start-button::before {
@@ -113,6 +125,32 @@ html, body {
 #start-button:hover::after {
     outline-offset: 0.7rem;
     outline-style: double;
+
+}
+
+@media (max-width: 768px) {
+    #start-button {
+        padding: 0.8rem 3rem;
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+    }
+
+    #start-button:hover {
+        transform: perspective(500px) rotate3d(1, 1, 0, 20deg) scale3d(1.1, 1.1, 1.1);
+    }
+
+}
+
+@media (max-width: 480px) {
+    #start-button {
+        padding: 0.6rem 2rem;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    #start-button:hover {
+        transform: scale(1.02);
+    }
 
 }
 
