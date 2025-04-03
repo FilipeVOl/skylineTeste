@@ -75,7 +75,6 @@ body {
   margin-top: 2rem;
 }
 
-<<<<<<< HEAD
 .logo {
     height: 15%;
     opacity: 0;
@@ -113,83 +112,6 @@ background: linear-gradient(45deg, #778da9, #415a77);
   overflow: hidden;
   z-index: 1;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-=======
-@keyframes infiniteOutline {
-    0%, 30%, 70%, 100% {
-        outline-offset: 1rem;
-    }
-    15%, 50%, 80% {
-        outline-offset: 1.5rem;
-    }
-}
-
-  .upfooter {
-    margin-top: 2rem;
-  }
-
-
-.logo {
-    height: 15%;
-    animation: logoTransform 1.5s ease-in-out forwards;
-    will-change: transform, height;
-}
-
-@keyframes logoTransform {
-    0% {
-        height: 18%;
-        transform: scale(1.2);
-    }
-    50% {
-        height: 16%;
-        transform: scale(1.1);
-    }
-    100% {
-        height: 15%;
-        transform: scale(1);
-    }
-}
-
-#start-button {
-    background-color: #778da9;
-    color: white;
-    border: none;
-    padding: 1rem 5rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border-radius: 50px;
-    transition: all 0.3s ease, outline-offset 0.3s ease;
-    margin-bottom: 4rem;
-    transform: scale(1);
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-}
-
-#start-button:hover {
-    transform: scale(1.2);
-    outline-style: double;
-    transform: perspective(500px) rotate3d(1, 1, 0, 20deg);
-    filter: brightness(1.2);
-    outline-offset: 1rem;
-    animation: infiniteOutline 6s infinite ease-in-out;
-}
-
-#start-button::after, card::before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: #415a77;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    padding: 10px;
-    border-radius: 50px;
-    transform: scale(1);
-    transition: all 0.3s ease, outline-offset 0.3s ease;
-
-    background-image: conic-gradient(45deg, red, #006aff, #1b263b);
-    animation: 3s spin linear infinite, infiniteOutline 6s infinite ease-in-out;
->>>>>>> 7d71a1c4afb3fc2971138d2f500349c1af4d4bca
 }
 
 #start-button::before {
@@ -231,7 +153,6 @@ background: linear-gradient(45deg, #778da9, #415a77);
   animation: expandOutline 0.6s ease forwards;
 }
 
-<<<<<<< HEAD
 @keyframes expandOutline {
     0% {
       transform: scale(0.8);
@@ -249,34 +170,6 @@ background: linear-gradient(45deg, #778da9, #415a77);
       opacity: 1;
     }
   }
-=======
-@media (max-width: 768px) {
-    #start-button {
-        padding: 0.8rem 3rem;
-        font-size: 1.2rem;
-        margin-bottom: 3rem;
-    }
-
-    #start-button:hover {
-        transform: perspective(500px) rotate3d(1, 1, 0, 20deg) scale3d(1.1, 1.1, 1.1);
-    }
-
-}
-
-@media (max-width: 480px) {
-    #start-button {
-        padding: 0.6rem 2rem;
-        font-size: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    #start-button:hover {
-        transform: scale(1.02);
-    }
-
-}
-
->>>>>>> 7d71a1c4afb3fc2971138d2f500349c1af4d4bca
 
 @keyframes glowPulse {
   0%,
